@@ -1,4 +1,4 @@
-# Brittany L. Walentin RANDOM MENU GENERATOR RUBRIC
+# Brittany L. Walentin - RANDOM MENU GENERATOR RUBRIC
 
 1=Beginner, 2=Proficient, 3=Master
 
