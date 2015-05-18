@@ -1,4 +1,4 @@
-# RANDOM MENU GENERATOR RUBRIC
+# RANDOM MENU GENERATOR RUBRIC - Corinne Pingul
 
 1=Beginner, 2=Proficient, 3=Master
 
