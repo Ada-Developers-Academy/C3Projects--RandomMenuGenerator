@@ -14,8 +14,20 @@ food = gets.chomp.split(",")
 puts "\nHow many menu items would you like to see?"
 num_of_items = gets.chomp.to_i
 
+# Failed edge case testing.
+#
+# [adjectives, cooking_method, food].each do |array|
+#   array.each do |word|
+#     word.split("").each do |letter|
+#       if !(/[[:alpha:]]/ === letter)
+#         array.delete(word)
+#       end
+#     end
+#   end
+# end
+
 # finds the length of the shortest array
-# ensures generated menu has all 3 categories
+# this ensures that the generated menu includes words from all 3 categories
 min_items = [adjectives.length, cooking_method.length, food.length].min
 
 if num_of_items > min_items
