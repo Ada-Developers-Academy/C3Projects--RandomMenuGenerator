@@ -5,7 +5,7 @@ how_long = food_type.length
 
 num_of_items = 0
 
-until continue_input == "n"
+# until continue_input == "n"
   
 while num_of_items == 0
   puts "How many funny food items would you like to see. You can ask for #{how_long} or less items."
