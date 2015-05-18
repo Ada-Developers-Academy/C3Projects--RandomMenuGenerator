@@ -1,16 +1,20 @@
 # Random Menu Generator
+# This program takes user input and outputs a chosen number of unique random menu items
 
 # Introduce the generator and ask for input
 puts "Welcome to the Random Menu Generator."
 puts "You get to pick a descriptor, a cooking style, and a type of food to combine into a random menu item."
 puts "The generator will make a list of unique menu items, so make sure to enter enough words in each category."
 puts "Let's start with adjectives. Please enter a list of adjectives, separated by spaces:"
+
 # Gets input from the user and splits it on white space, then stores that in an array.
 adjective = gets.chomp.split
 
+# Prompts user to give as many words in the second category as in the first
 puts "Okay, now give me some cooking styles.\nYou gave me #{adjective.length} adjectives, so I recommend that many words here too."
 cooking_style = gets.chomp.split
 
+# Prompts user to give as many words in the third category as in the smaller of the previous two
 puts "Okay, now give me some foods.\nYour smallest set of words so far is #{[adjective.length, cooking_style.length].sort[0]}, so I recommend that many words here too."
 food = gets.chomp.split
 
