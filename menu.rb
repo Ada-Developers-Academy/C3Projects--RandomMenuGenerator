@@ -4,14 +4,14 @@ food_type = [ "beef", "brussle sprouts", "clams", "cake", "bourbon", "pie", "nut
 how_long = food_type.length
 
 num_of_items = 0
-
-# until continue_input == "n"
   
 while num_of_items == 0
   puts "How many funny food items would you like to see. You can ask for #{how_long} or less items."
   num_of_items = gets.chomp.to_i
   if num_of_items > how_long || num_of_items == 0
     puts "Please enter a number less than or equal to #{how_long}"
+    num_of_items = 0
+    next
   end
   
   (1..num_of_items).each do |num|
