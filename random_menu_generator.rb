@@ -1,8 +1,17 @@
-adjectives = ["Creamy", "Tantilizing", "Toe-curling", "Finger-lickin'", "Savory", "Sweet", "Mushy", "Moist", "Spicy", "Rock-hard", "Boozy"]
-cooking_method = ["Toasted", "Seared", "Glazed", "Handmade", "Baked", "Smoked", "Grilled", "Sautéed", "Fried", "Squashed", "Flambéed"]
-food = ["Reindeer", "Strawberry Cake", "Rack of Lamb", "Veggies", "Plantains", "Hot Toddies", "Three-bean Salad", "Shrimp", "Sushi", "Horse Burger"]
+# adjectives = ["Creamy", "Tantilizing", "Toe-curling", "Finger-lickin'", "Savory", "Sweet", "Mushy", "Moist", "Spicy", "Rock-hard", "Boozy"]
+# cooking_method = ["Toasted", "Seared", "Glazed", "Handmade", "Baked", "Smoked", "Grilled", "Sautéed", "Fried", "Squashed", "Flambéed"]
+# food = ["Reindeer", "Strawberry Cake", "Rack of Lamb", "Veggies", "Plantains", "Hot Toddies", "Three-bean Salad", "Shrimp", "Sushi", "Horse Burger"]
 
-puts "How many menu items would you like to see the Random Menu Generator generate?"
+puts "Welcome to the Random Menu Generator!\nPlease provide a list of adjectives, separated by commas."
+adjectives = gets.chomp.split(",")
+
+puts "\nPlease provide a list of cooking methods, separated by commas."
+cooking_method = gets.chomp.split(",")
+
+puts "\nPlease provide a list of food, separated by commas."
+food = gets.chomp.split(",")
+
+puts "\nHow many menu items would you like to see?"
 num_of_items = gets.chomp.to_i
 
 # finds the length of the shortest array
@@ -10,7 +19,7 @@ num_of_items = gets.chomp.to_i
 min_items = [adjectives.length, cooking_method.length, food.length].min
 
 if num_of_items > min_items
-  puts "\nI'm sorry, we're only prepared to generate #{min_items} menu items.\n"
+  puts "\nI'm sorry, we're only prepared to generate #{min_items} menu item(s)."
   num_of_items = min_items
 end
 
