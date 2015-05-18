@@ -1,4 +1,4 @@
-# RANDOM MENU GENERATOR RUBRIC
+#Katie Atrops - RANDOM MENU GENERATOR RUBRIC
 
 1=Beginner, 2=Proficient, 3=Master
 
