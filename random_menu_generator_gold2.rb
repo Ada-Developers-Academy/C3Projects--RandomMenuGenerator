@@ -5,7 +5,9 @@ how_many = gets.chomp
 
 # outputs error when nil response or response does not include a number
 numbers = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
-unless how_many.length != 0 && numbers.any? { |num| how_many.include?(num)}
+how_many_array = []
+how_many_array.push(how_many)
+unless how_many.length != 0 && how_many_array.all? {|num| numbers.include?(num) } #numbers.any? { |num| how_many.include?(num)}
   puts "That doesn't make any sense. Please enter a number."
 end
 
@@ -22,7 +24,11 @@ adj1_shuffle = adj1.shuffle
 adj2_shuffle = adj2.shuffle
 food_shuffle = food.shuffle
 
+# user input: how many meals do you want? Converted to integer.
 how_many = how_many.to_i
+
+# assigns num (meal counter) initial value of 0
+num = 0
 
 if how_many > adj1.length
   puts "I don't have enough information to make that many delicious meals. \nNext time, enter a number between 0 and #{adj1.length}"
