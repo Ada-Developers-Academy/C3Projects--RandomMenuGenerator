@@ -7,7 +7,7 @@ how_many = gets.chomp
 numbers = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
 how_many_array = []
 how_many_array.push(how_many)
-unless how_many.length != 0 && how_many_array.all? {|num| numbers.include?(num) } #numbers.any? { |num| how_many.include?(num)}
+unless how_many.length != 0 && how_many.each_char.all? {|num| numbers.include?(num) } 
   puts "That doesn't make any sense. Please enter a number."
 end
 
