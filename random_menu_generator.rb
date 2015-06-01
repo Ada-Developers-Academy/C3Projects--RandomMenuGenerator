@@ -40,10 +40,10 @@ rando_adjective = adjectives.sample(min_items)
 rando_cooking_method = cooking_method.sample(min_items)
 rando_food = food.sample(min_items)
 
-count = 1
+count = 0
 # ASSEMBLES THE LIST
 num_of_items.times do
   # don't forget to count by indices (hence [count - 1])
-  puts "#{count}. #{rando_adjective[count - 1]} #{rando_cooking_method[count - 1]} #{rando_food[count - 1]}"
+  puts "#{count + 1}. #{rando_adjective[count]} #{rando_cooking_method[count]} #{rando_food[count]}"
   count += 1
 end
