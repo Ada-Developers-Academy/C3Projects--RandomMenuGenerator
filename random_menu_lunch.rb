@@ -7,7 +7,7 @@ food = ["snake scales", "pandas", "Hagrid beards", "piglets", "tofurkey", "whale
 
 # I used a while loop to output meals equal to any number of elements in an array starting at 1
 meal_count = 1
-while meal_count <= adjective.length
+while meal_count <= [adjective.length, cooking_method.length, food.length].min
   puts "#{meal_count}. #{adjective.sample} #{cooking_method.sample} #{food.sample}" # called the .sample method on each array to choose an element randomly
   meal_count += 1 # meal count starts at 1 and increments by one until items outputted equals to # of elements in the arrays
 end
