@@ -1,30 +1,28 @@
-# adjectives = ["Creamy", "Tantilizing", "Toe-curling", "Finger-lickin'", "Savory", "Sweet", "Mushy", "Moist", "Spicy", "Rock-hard", "Boozy"]
-# cooking_method = ["Toasted", "Seared", "Glazed", "Handmade", "Baked", "Smoked", "Grilled", "Sautéed", "Fried", "Squashed", "Flambéed"]
-# food = ["Reindeer", "Strawberry Cake", "Rack of Lamb", "Veggies", "Plantains", "Hot Toddies", "Three-bean Salad", "Shrimp", "Sushi", "Horse Burger"]
+# thanks to Kari - figured out RegEx
+# testing that the user inputted only words and not numbers/symbols/etc.
+def validate_alpha_chars(array)
+  array.each do |word|
+    if word.match(/[0-9]/)
+      puts "The input '#{word}' is invalid and was deleted."
+      array.delete(word)
+    end
+  end
+end
 
 puts "Welcome to the Random Menu Generator!\nPlease provide a list of adjectives, separated by commas."
 adjectives = gets.chomp.split(",")
+validate_alpha_chars(adjectives)
 
 puts "\nPlease provide a list of cooking methods, separated by commas."
 cooking_method = gets.chomp.split(",")
+validate_alpha_chars(cooking_method)
 
 puts "\nPlease provide a list of food, separated by commas."
 food = gets.chomp.split(",")
+validate_alpha_chars(food)
 
 puts "\nHow many menu items would you like to see?"
 num_of_items = gets.chomp.to_i
-
-# Failed edge case testing.
-#
-# [adjectives, cooking_method, food].each do |array|
-#   array.each do |word|
-#     word.split("").each do |letter|
-#       if !(/[[:alpha:]]/ === letter)
-#         array.delete(word)
-#       end
-#     end
-#   end
-# end
 
 # finds the length of the shortest array
 # this ensures that the generated menu includes words from all 3 categories
